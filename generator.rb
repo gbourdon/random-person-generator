@@ -11,7 +11,7 @@ def readlines(file) # How to read a file's lines?
 end
 
 age_range = (18 .. 100) # Set this to whatever age range you want
-gender = nil # Set this to a specific gender that you want your person to be
+gender = "Male" # Set this to a specific gender that you want your person to be
 
 age = rand(age_range)
 gender ||= randBool() ? "Guy" : "Girl"
