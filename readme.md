@@ -1,4 +1,4 @@
-# Random Name Generator
+# Random Person Generator
 
 Have you ever wanted a random person generated out of thin air?
 
