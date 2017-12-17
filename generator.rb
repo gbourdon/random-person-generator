@@ -11,13 +11,15 @@ def readlines(file) # How to read a file's lines?
 end
 
 age_range = (18 .. 100) # Set this to whatever age range you want
-gender = nil # Set this to a specific gender that you want your person to be
+gender = nil # Set this to have the person be a specific gender
+firstName = nil # Set this to have the person have a specific First Name
+lastName = nil # Set this to have the person have a specific Last Name
 
 age = rand(age_range)
 gender ||= randBool() ? "Guy" : "Girl"
 
-firstName = gender == "Guy" ? readlines("names/boys.txt").sample.strip : readlines("names/girls.txt").sample.strip
+firstName ||= gender == "Guy" ? readlines("names/boys.txt").sample.strip : readlines("names/girls.txt").sample.strip
 
-lastName = readlines("names/surnames.txt").sample.strip
+lastName ||= readlines("names/surnames.txt").sample.strip
 
 print "#{firstName} #{lastName} is #{age} and is a #{gender}"
