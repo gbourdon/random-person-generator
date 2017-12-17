@@ -16,8 +16,8 @@ gender = nil # Set this to a specific gender that you want your person to be
 age = rand(age_range)
 gender ||= randBool() ? "Guy" : "Girl"
 
-firstName = gender == "Guy" ? readlines("names/boys.txt").sample : readlines("names/girls.txt").sample
+firstName = gender == "Guy" ? readlines("names/boys.txt").sample.strip : readlines("names/girls.txt").sample.strip
 
-lastName = readlines("names/surnames.txt").sample
+lastName = readlines("names/surnames.txt").sample.strip
 
 print "#{firstName} #{lastName} is #{age} and is a #{gender}"
